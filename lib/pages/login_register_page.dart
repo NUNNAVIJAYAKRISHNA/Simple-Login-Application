@@ -50,9 +50,7 @@ class _LoginPageState extends State<LoginPage> {
     return TextField(
       controller: controller,
       obscureText: isPassword,
-      decoration: InputDecoration(
-        labelText: title,
-      ),
+      decoration: InputDecoration(labelText: title),
     );
   }
 
@@ -62,8 +60,9 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget _submitButton() {
     return ElevatedButton(
-      onPressed:
-          isLogin ? _signInWithEmailAndPassword : _createUserWithEmailAndPassword,
+      onPressed: isLogin
+          ? _signInWithEmailAndPassword
+          : _createUserWithEmailAndPassword,
       child: Text(isLogin ? 'Login' : 'Register'),
     );
   }
@@ -90,9 +89,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Login / Register'),
-      ),
+      appBar: AppBar(title: const Text('Login / Register')),
       body: Container(
         padding: const EdgeInsets.all(20),
         child: Column(
