@@ -15,7 +15,13 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home Page'),
+        title: const Text(
+            'Home Page',
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+            )
+        ),
         centerTitle: true,
         backgroundColor: Colors.blueAccent,
         foregroundColor: Colors.white,
